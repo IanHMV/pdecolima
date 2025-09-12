@@ -3,29 +3,27 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Instalar dependencias
+# Copiar package.json y package-lock.json
 COPY package*.json ./
-RUN npm install
 
-# Copiar todo el proyecto y construir
+# Instalar dependencias
+RUN npm install --legacy-peer-deps
+
+# Copiar todo el proyecto
 COPY . .
-RUN npm run build   # Vite genera /app/dist
 
-# ===========================
+# Asegurar permisos correctos
+RUN chmod -R 755 ./node_modules/.bin
+
+# Build de Vite
+RUN npm run build
+
 # Etapa 2: Servir con Nginx
-# ===========================
 FROM nginx:alpine
 
-# Eliminar la configuración default de Nginx
 RUN rm /etc/nginx/conf.d/default.conf
-
-# Copiar configuración personalizada
 COPY ./nginx/container.conf /etc/nginx/conf.d/default.conf
-
-# Copiar los archivos compilados de Vite
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
