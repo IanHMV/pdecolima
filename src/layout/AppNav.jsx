@@ -67,8 +67,7 @@ function ProfileMenu() {
 const navListMenuItems = [
   {
     title: "Sistema 1",
-    description:
-      "Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal.",
+    description: <a href="https://www.plataformadigitalnacional.org/declaraciones">Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal.</a>,
   },
   {
     title: "Sistema 3",
@@ -81,7 +80,7 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
  
   const renderItems = navListMenuItems.map(({ title, description }) => (
-    <a href="#" key={title}>
+    <a href={description} key={title}>
       <MenuItem>
         <Typography variant="h6" color="blue-gray" className="mb-1">
           {title}
@@ -137,18 +136,18 @@ function NavListMenu() {
  
 // nav list component
 const navListItems = [
-  {
-    label: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    label: "Blocks",
-    icon: CubeTransparentIcon,
-  },
-  {
-    label: "Docs",
-    icon: CodeBracketSquareIcon,
-  },
+// {
+//   label: "Account",
+//   icon: UserCircleIcon,
+// },
+// {
+//   label: "Blocks",
+//   icon: CubeTransparentIcon,
+// },
+// {
+//   label: "Docs",
+//   icon: CodeBracketSquareIcon,
+// },
 ];
  
 function NavList() {
