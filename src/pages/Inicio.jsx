@@ -13,7 +13,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s1.svg"
+                    src="/img/s1.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
@@ -38,7 +38,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s2.svg"
+                    src="/img/s2.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
@@ -63,7 +63,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s3.svg"
+                    src="/img/s3.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
@@ -88,7 +88,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s4.svg"
+                    src="/img/s4.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
@@ -113,7 +113,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s5.svg"
+                    src="/img/s5.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
@@ -138,7 +138,7 @@ const Inicio = () => {
               <div className="opacity-100 transform-none">
                 <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
                   <img
-                    src="../../public/img/s6.svg"
+                    src="/img/s6.svg"
                     alt=""
                     className='className="block w-auto p-8 object-scale-down" '
                   />
