@@ -6,7 +6,7 @@ const Inicio = () => {
       <div className="mx-10 py-20 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
         <div className="m-0 box-border p-2">
           <a
-            href="https://pdecolima.mx/login"
+            href="https://pdecolima.mx/s1"
             className="bg-s1-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
           >
             <div>
