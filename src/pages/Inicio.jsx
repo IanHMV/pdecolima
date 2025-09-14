@@ -56,7 +56,7 @@ const Inicio = () => {
 
         <div className="m-0 box-border p-2">
           <a
-            href=""
+            href="https://pdecolima.mx/s3"
             className="bg-s3-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
           >
             <div>

@@ -67,20 +67,21 @@ function ProfileMenu() {
 const navListMenuItems = [
   {
     title: "Sistema 1",
-    description: <a href="https://www.plataformadigitalnacional.org/declaraciones">Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal.</a>,
+    link: "https://pdecolima.mx/s1/",
+    description: "Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal"
   },
   {
     title: "Sistema 3",
-    description:
-      "Sistema nacional de servidores públicos y particulares sancionados.",
+    link:"https://pdecolima.mx/s3/",
+    description:"Sistema nacional de servidores públicos y particulares sancionados.",
   },
 ];
  
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
  
-  const renderItems = navListMenuItems.map(({ title, description }) => (
-    <a href={description} key={title}>
+  const renderItems = navListMenuItems.map(({ title, description,link }) => (
+    <a href={link} key={title}>
       <MenuItem>
         <Typography variant="h6" color="blue-gray" className="mb-1">
           {title}
@@ -96,7 +97,7 @@ function NavListMenu() {
     <React.Fragment>
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal">
+          <Typography as="a" href="https://pdecolima.mx" variant="small" className="font-normal">
             <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
               <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
               Sistemas{" "}
@@ -116,7 +117,7 @@ function NavListMenu() {
             variant="gradient"
             className="col-span-3 grid h-full w-full place-items-center rounded-md"
           >
-            <img src="../../public/img/pde-logo.png" alt="Descripción de la imagen" className="h-28 w-36" /> {/* Icono */}
+            <img src="/img/pde-logo.png" alt="pdecolima-logo" className="h-28 w-36" /> {/* Icono */}
           </Card>
           <ul className="col-span-4 flex w-full flex-col gap-1">
             {renderItems}
@@ -191,10 +192,10 @@ export default function AppNav() {
       <div className="relative  mx-auto flex items-center justify-between text-blue-gray-900 ">
         <Typography
           as="a"
-          href="#"
+          href="https://pdecolima.mx/"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
-          PDECOLIMA
+          PDECOLIMA        {/*Titulo Navbar*/}
         </Typography>
         <div className="hidden lg:block">
           <NavList />
