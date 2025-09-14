@@ -3,7 +3,7 @@ import React from "react";
 const Inicio = () => {
   return (
     <>
-      <div className="mx-10 py-20 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
+      <div className="mx-10 py-32 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
         <div className="m-0 box-border p-2">
           <a
             href="https://pdecolima.mx/s1"
@@ -29,18 +29,18 @@ const Inicio = () => {
           </a>
         </div>
 
-        <div className="m-0 box-border p-2">
+        <div className="m-0 box-border p-2 ">
           <a
             href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full "
           >
             <div>
               <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
+                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full ">
                   <img
                     src="/img/s2.svg"
                     alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
+                    className='block w-auto p-8 object-scale-down'
                   />
                   <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
                     Sistema de evolución patrimonial, de declaración de
@@ -86,7 +86,7 @@ const Inicio = () => {
           >
             <div>
               <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
+                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
                   <img
                     src="/img/s4.svg"
                     alt=""
@@ -111,7 +111,7 @@ const Inicio = () => {
           >
             <div>
               <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
+                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
                   <img
                     src="/img/s5.svg"
                     alt=""
@@ -136,7 +136,7 @@ const Inicio = () => {
           >
             <div>
               <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
+                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
                   <img
                     src="/img/s6.svg"
                     alt=""
