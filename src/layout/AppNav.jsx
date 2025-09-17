@@ -193,9 +193,10 @@ export default function AppNav() {
         <Typography
           as="a"
           href="https://pdecolima.mx/"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+          className="mr-4 px-2 ml-2  cursor-pointer py-1.5 font-medium flex items-center rounded-3xl "
         >
-          PDECOLIMA        {/*Titulo Navbar*/}
+          <img src="/img/icon.jpg" alt="pdecolima-jpg" className="size-10" />
+          <p className="font-sans font-bold shadow-2xl">PDECOLIMA</p>        {/*Titulo Navbar*/}
         </Typography>
         <div className="hidden lg:block">
           <NavList />
