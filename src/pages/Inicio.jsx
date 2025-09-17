@@ -43,8 +43,7 @@ const Inicio = () => {
                     className='block w-auto p-8 object-scale-down'
                   />
                   <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de evolución patrimonial, de declaración de
-                    intereses y constancia de presentación de declaración fiscal
+                    Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
                   </p>
                   <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
                   <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
@@ -68,8 +67,7 @@ const Inicio = () => {
                     className='className="block w-auto p-8 object-scale-down" '
                   />
                   <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de los servidores públicos que intervengan en
-                    procedimientos de contrataciones públicas
+                    Sistema nacional de servidores públicos y particulares sancionados
                   </p>
                   <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
                   <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
