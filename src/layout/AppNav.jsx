@@ -196,7 +196,7 @@ export default function AppNav() {
           href="https://pdecolima.mx/"
           className="mr-4 px-2 ml-2  cursor-pointer py-1.5 font-medium flex items-center rounded-3xl "
         >
-          <img src="/img/icon.jpg" alt="pdecolima-jpg" className="size-10" />
+          <img src="/img/icono.png" alt="pdecolima-jpg" className="size-10" />
           <p className="font-sans font-bold shadow-2xl">PDECOLIMA</p>        {/*Titulo Navbar*/}
         </Typography>
         <div className="hidden lg:block">

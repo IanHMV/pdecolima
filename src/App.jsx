@@ -6,6 +6,9 @@ import InicioCiudadano from "./pages/ciudadano/InicioCiudadano";
 import LoaderCube from "./components/LoaderCube";
 import { useState, useEffect } from "react";
 import FadeIn from "./components/FadeIn";
+import LayoutCiudadano from "./layout/LayoutCiudadano";
+import Proof from "./pages/Proof";
+import Entes from "./pages/ciudadano/Entes";
 import "./styles/loaders.css"
 
 export default function App() {
@@ -26,7 +29,7 @@ export default function App() {
 
         <Route
           path="/"
-          element={loading ? 
+          element={loading ?
           <LoaderCube /> :
            (<FadeIn><Inicio /></FadeIn>)}
         />
@@ -34,11 +37,14 @@ export default function App() {
         {/* Funcionario */}
         <Route path="/funcionario" element={<Layout/>}>
           <Route index element={<InicioFuncionario/>}/>
+          
         </Route>
 
         {/* Ciudadano */}
-        <Route path="/ciudadano" element={<Layout/>}>
-          <Route index element={<InicioCiudadano/>}/>
+        <Route path="/ciudadano" element={<LayoutCiudadano/>}>
+          <Route index element={<Entes/>}/>
+          <Route path="sistemas" element={<InicioCiudadano/>}/>
+          <Route path="proof" element={<Proof/>}/>
         </Route>
 
       </Routes>
