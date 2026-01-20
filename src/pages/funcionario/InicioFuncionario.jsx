@@ -1,157 +1,144 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const InicioFuncionario = () => {
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <>
-      <div className="mx-10 py-32 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
-        <div className="m-0 box-border p-2">
+    <div className="relative min-h-screen">
+      
+      {/* 🖼️ Fondo */}
+      <div
+        className="absolute inset-0 bg-cover bg-center hidden md:block z-0"
+        style={{ backgroundImage: "url('/img/fondoSistemas.png')" }}
+      />
+
+      {/* 🌑 Overlay */}
+      <div className="absolute inset-0 bg-black/25 z-10" />
+
+      {/* 🧩 Contenido */}
+      <motion.div
+        className="relative z-20 mx-10 py-32 grid grid-cols-1 gap-2
+                   xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        {/* CARD 1 */}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
             href="https://pdecolima.mx/s1"
-            className="bg-s1-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s1-gradiente shadow-cardSystems rounded-lg flex flex-col h-full"
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s1.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de evolución patrimonial, de declaración de
-                    intereses y constancia de presentación de declaración fiscal
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8">
+              <img src="/img/s1.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              </p>
+            </button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="m-0 box-border p-2 ">
+        {/* CARD 2 */}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full "
+            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full ">
-                  <img
-                    src="/img/s2.svg"
-                    alt=""
-                    className='block w-auto p-8 object-scale-down'
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
+              <img src="/img/s2.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
+              </p>
+            </button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="m-0 box-border p-2">
+        {/* CARD 3*/}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
             href="https://pdecolima.mx/s3"
-            className="bg-s3-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s3-gradiente shadow-cardSystems rounded-lg flex flex-col h-full "
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s3.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema nacional de servidores públicos y particulares sancionados
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8 ">
+              <img src="/img/s3.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              </p>
+            </button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="m-0 box-border p-2">
+        {/* CARD 4 */}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s4.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de información y comunicación del Sistema Nacional
-                    Anticorrupción y del Sistema Nacional de Fiscalización
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
+              <img src="/img/s4.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              </p>
+            </button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="m-0 box-border p-2">
+        {/* CARD 5 */}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s5.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de denuncias públicas de faltas administrativas y
-                    hechos de corrupción
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
+              <img src="/img/s5.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              </p>
+            </button>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="m-0 box-border p-2">
+
+        {/* CARD 6 */}
+        <motion.div className="p-2" variants={itemVariants}>
           <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
+            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
           >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s6.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de información pública de contrataciones
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
+            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
+              <img src="/img/s6.svg" alt="" className="w-auto object-scale-down" />
+              <p className="mt-4 text-white text-center">
+                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              </p>
+            </button>
           </a>
-        </div>
-      </div>
-    </>
+        </motion.div>
+
+        {/* El resto de cards funciona IGUAL */}
+      </motion.div>
+    </div>
   );
 };
 
