@@ -7,7 +7,6 @@ import LoaderCube from "./components/LoaderCube";
 import { useState, useEffect } from "react";
 import FadeIn from "./components/FadeIn";
 import LayoutCiudadano from "./layout/LayoutCiudadano";
-import Proof from "./pages/Proof";
 import Entes from "./pages/ciudadano/Entes";
 import "./styles/loaders.css"
 
@@ -44,7 +43,6 @@ export default function App() {
         <Route path="/ciudadano" element={<LayoutCiudadano/>}>
           <Route index element={<Entes/>}/>
           <Route path="sistemas" element={<InicioCiudadano/>}/>
-          <Route path="proof" element={<Proof/>}/>
         </Route>
 
       </Routes>
