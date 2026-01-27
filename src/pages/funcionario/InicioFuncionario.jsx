@@ -53,7 +53,7 @@ const InicioFuncionario = () => {
         <motion.div className="p-2" variants={itemVariants}>
           <a
             href="https://pdecolima.mx/s1"
-            className="bg-s1-gradiente shadow-cardSystems rounded-lg flex flex-col h-full"
+            className="bg-[#1FB6D5] shadow-cardSystems rounded-lg flex flex-col h-full  transition-colors duration-200 hover:bg-[#6FD3E8]"
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8">
               <img src="/img/s1.svg" alt="" className="w-auto object-scale-down" />
@@ -82,7 +82,7 @@ const InicioFuncionario = () => {
         <motion.div className="p-2" variants={itemVariants}>
           <a
             href="https://pdecolima.mx/s3"
-            className="bg-s3-gradiente shadow-cardSystems rounded-lg flex flex-col h-full "
+            className="bg-[#1FB6D5] shadow-cardSystems rounded-lg flex flex-col h-full transition-colors duration-200 hover:bg-[#6FD3E8]"
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 ">
               <img src="/img/s3.svg" alt="" className="w-auto object-scale-down" />

@@ -1,6 +1,6 @@
 function Footer() {
     return (
-      <footer className="bg-gray-800 text-gray-300 py-4 bg-pdn-gradiente">
+      <footer className="text-gray-300 py-4 bg-[#08172E]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           <div className="px-5">
@@ -104,13 +104,13 @@ function Footer() {
             >Ubicación</h2>
             <div className="flex items-center justify-center">
             <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22315.998624449814!2d-103.72173110505166!3d19.254499755465478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84255a942a9b2e49%3A0x9a4c4fefdb51b33b!2sGabriel%20Garc%C3%ADa%20M%C3%A1rquez%20533%2C%20Real%20Vista%20Hermosa%2C%2028018%20Colima%2C%20Col.!5e0!3m2!1ses-419!2smx!4v1737349606915!5m2!1ses-419!2smx"
-            width="200"
-            height="200"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470.81840591140497!2d-103.71647197841395!3d19.258553835103893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84255ab839e81bed%3A0x8bfa5ad3680e09a7!2sAlfonso%20Michel%2034%2C%20Jardines%20Vista%20Hermosa%20III%2C%2028017%20Colima%2C%20Col.!5e0!3m2!1ses-419!2smx!4v1769101615672!5m2!1ses-419!2smx"
+              width="500"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             </div>
           </div>

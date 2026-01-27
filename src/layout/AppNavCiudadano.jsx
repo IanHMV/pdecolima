@@ -188,7 +188,7 @@ export default function AppNavCiudadano() {
   }, []);
  
   return (
-    <div className="p-5 bg-pdn-gradiente" >
+    <div className="p-5 bg-[#0A1F3D] shadow-2xl border-b-2 border-[#E6E6E6]" >
       <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 bg-opacity-100 bg-white">
       <div className="relative  mx-auto flex items-center justify-between text-blue-gray-900 ">
         <Typography
