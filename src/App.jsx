@@ -7,8 +7,9 @@ import LoaderCube from "./components/LoaderCube";
 import { useState, useEffect } from "react";
 import FadeIn from "./components/FadeIn";
 import LayoutCiudadano from "./layout/LayoutCiudadano";
+import LayoutBase from "./layout/LayoutBase";
 import Entes from "./pages/ciudadano/Entes";
-import "./styles/loaders.css"
+import "./styles/loaders.css";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -25,24 +26,34 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route element={<LayoutBase />}>
 
-        <Route
-          path="/"
-          element={loading ?
-          <LoaderCube /> :
-           (<FadeIn><Inicio /></FadeIn>)}
-        />
-
-        {/* Funcionario */}
-        <Route path="/funcionario" element={<Layout/>}>
-          <Route index element={<InicioFuncionario/>}/>
+        {/* Loader */}
+          <Route
+            path="/"
+            element={
+              loading ? (
+                <LoaderCube />
+              ) : (
+                <FadeIn>
+                  <Inicio />
+                </FadeIn>
+              )
+            }
+          />
           
-        </Route>
 
-        {/* Ciudadano */}
-        <Route path="/ciudadano" element={<LayoutCiudadano/>}>
-          <Route index element={<Entes/>}/>
-          <Route path="sistemas" element={<InicioCiudadano/>}/>
+          {/* Funcionario */}
+          <Route path="/funcionario" element={<Layout />}>
+            <Route index element={<InicioFuncionario />} />
+          </Route>
+
+          {/* Ciudadano */}
+          <Route path="/ciudadano" element={<LayoutCiudadano />}>
+            <Route index element={<Entes />} />
+            <Route path="sistemas" element={<InicioCiudadano />} />
+          </Route>
+          
         </Route>
 
       </Routes>
