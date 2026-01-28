@@ -21,7 +21,7 @@ export default function DefaultAccordion({ data }) {
             {item.titulo}
           </AccordionHeader>
           <AccordionBody>
-            <Lista listaCompleta={item.links} />
+            <Lista listaCompleta={item.links}  descripcion={item.descripcion}/>
           </AccordionBody>
         </Accordion>
       ))}

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import AppNav from './AppNav'
+import AppNavFuncionario from './AppNavFuncionario'
 import Footer from './Footer'
 
-function Layout() {
+function LayoutFuncionario() {
   return (
     <>
-    <AppNav/>
+    <AppNavFuncionario/>
     <main>
         <Outlet/>
     </main>
@@ -15,4 +15,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export default LayoutFuncionario

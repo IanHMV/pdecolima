@@ -68,12 +68,12 @@ function ProfileMenu() {
 const navListMenuItems = [
   {
     title: "Sistema 1",
-    link: "https://pdecolima.mx/s1/",
+    link: "https://www.plataformadigitalnacional.org/declaraciones",
     description: "Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal"
   },
   {
     title: "Sistema 3",
-    link:"https://pdecolima.mx/s3/",
+    link:"https://www.plataformadigitalnacional.org/sancionados",
     description:"Sistema nacional de servidores públicos y particulares sancionados.",
   },
 ];

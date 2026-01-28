@@ -57,7 +57,7 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8">
               <img src="/img/s1.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
                 Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
               </p>
             </button>
@@ -71,7 +71,7 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
               <img src="/img/s2.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
                 Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
               </p>
             </button>
@@ -86,8 +86,8 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 ">
               <img src="/img/s3.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
-                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
+                Sistema de servidores públicos y particulares sancionados
               </p>
             </button>
           </a>
@@ -100,8 +100,8 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
               <img src="/img/s4.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
-                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
+                Sistema de información y comunicación del Sistema Nacional Anticorrupción y del Sistema Nacional de Fiscalización
               </p>
             </button>
           </a>
@@ -114,8 +114,8 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
               <img src="/img/s5.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
-                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
+                Sistema de denuncias públicas de faltas administrativas y hechos de corrupción
               </p>
             </button>
           </a>
@@ -129,8 +129,8 @@ const InicioFuncionario = () => {
           >
             <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
               <img src="/img/s6.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center">
-                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
+              <p className="mt-4 text-white text-center h-1/2 font-bold">
+                Sistema de información pública de contrataciones
               </p>
             </button>
           </a>

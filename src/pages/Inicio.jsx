@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/background.css";
-import "../styles/fonts.css";
 import { motion } from "framer-motion";
 
 const Inicio = () => {
@@ -107,7 +106,7 @@ const Inicio = () => {
           to="/funcionario"
           className="bg-button-inicio-gradiente w-2/5 max-w-sm md:w-1/4 text-center px-6 py-3 text-white font-semibold rounded-lg border-2 border-white/50 hover:border-white transition"
         >
-          Soy Funcionario
+          Soy Servidor Público
         </Link>
       </div>
     </div>

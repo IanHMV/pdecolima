@@ -175,7 +175,7 @@ function NavList() {
   );
 }
  
-export default function AppNav() {
+export default function AppNavFuncionario() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
  
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
