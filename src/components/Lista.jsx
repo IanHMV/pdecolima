@@ -1,23 +1,43 @@
-import { List, ListItem, Card } from "@material-tailwind/react";
-
-export function Lista({ listaCompleta }) {
+export function Lista({ listaCompleta, descripcion }) {
   if (!listaCompleta || listaCompleta.length === 0) {
-    return (
-      <Card className="w-96">
-        <List>
-          <ListItem>No hay elementos en la lista</ListItem>
-        </List>
-      </Card>
-    );
+    return <p>No hay elementos en la lista</p>;
   }
 
   return (
-    <List>
+    <>
+      {descripcion && (
+        <div className="p-3">
+          <p className="italiana-regular cursor-default">{descripcion}</p>
+        </div>
+      )}
+
       {listaCompleta.map((item, index) => (
-        <ListItem key={index}>
-          {item}
-        </ListItem>
+        <div key={index}>
+          <a
+            href={item.url}
+            onClick={(e) => {
+              e.preventDefault();
+              setTimeout(() => {
+                window.open(item.url, "_blank");
+              }, 200);
+            }}
+            className="block"
+          >
+            <div
+              className="
+              p-3 rounded-md cursor-pointer
+              transition-colors duration-300
+              hover:bg-gray-100
+              active:bg-blue-300
+              focus-visible:bg-blue-200
+              focus-visible:outline-none
+            "
+            >
+              <p className="font-bold text-base">{item.text}</p>
+            </div>
+          </a>
+        </div>
       ))}
-    </List>
+    </>
   );
 }

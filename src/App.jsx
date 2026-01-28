@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./layout/Layout";
+import LayoutFuncionario from "./layout/LayoutFuncionario";
 import InicioFuncionario from "./pages/funcionario/InicioFuncionario";
 import Inicio from "./pages/Inicio";
 import InicioCiudadano from "./pages/ciudadano/InicioCiudadano";
@@ -10,6 +10,7 @@ import LayoutCiudadano from "./layout/LayoutCiudadano";
 import LayoutBase from "./layout/LayoutBase";
 import Entes from "./pages/ciudadano/Entes";
 import "./styles/loaders.css";
+import "./styles/fonts.css";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -44,7 +45,7 @@ export default function App() {
           
 
           {/* Funcionario */}
-          <Route path="/funcionario" element={<Layout />}>
+          <Route path="/funcionario" element={<LayoutFuncionario />}>
             <Route index element={<InicioFuncionario />} />
           </Route>
 
