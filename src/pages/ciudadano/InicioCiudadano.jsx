@@ -1,158 +1,67 @@
-import React from "react";
+import { motion } from "framer-motion";
+import SystemCard from "../../components/SystemCard";
 
-const InicioCiudadano = () => {
-  return (
-    <>
-      <div className="mx-10 py-32 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
-        <div className="m-0 box-border p-2">
-          <a
-            href="https://www.plataformadigitalnacional.org/declaraciones"
-            className="bg-s1-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s1.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de evolución patrimonial, de declaración de
-                    intereses y constancia de presentación de declaración fiscal
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
+const SISTEMAS = [
+  {
+    url: "https://www.plataformadigitalnacional.org/declaraciones",
+    imagen: "/img/s1.svg",
+    descripcion: "Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal",
+    activeClass: "bg-s1-gradiente",
+  },
+  {
+    url: null,
+    imagen: "/img/s2.svg",
+    descripcion: "Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas",
+    activeClass: null,
+  },
+  {
+    url: "https://www.plataformadigitalnacional.org/sancionados",
+    imagen: "/img/s3.svg",
+    descripcion: "Sistema nacional de servidores públicos y particulares sancionados",
+    activeClass: "bg-s3-gradiente",
+  },
+  {
+    url: null,
+    imagen: "/img/s4.svg",
+    descripcion: "Sistema de información y comunicación del Sistema Nacional Anticorrupción y del Sistema Nacional de Fiscalización",
+    activeClass: null,
+  },
+  {
+    url: null,
+    imagen: "/img/s5.svg",
+    descripcion: "Sistema de denuncias públicas de faltas administrativas y hechos de corrupción",
+    activeClass: null,
+  },
+  {
+    url: null,
+    imagen: "/img/s6.svg",
+    descripcion: "Sistema de información pública de contrataciones",
+    activeClass: null,
+  },
+];
 
-        <div className="m-0 box-border p-2 ">
-          <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full "
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full ">
-                  <img
-                    src="/img/s2.svg"
-                    alt=""
-                    className='block w-auto p-8 object-scale-down'
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className="m-0 box-border p-2">
-          <a
-            href="https://www.plataformadigitalnacional.org/sancionados"
-            className="bg-s3-gradiente shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-pointer select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s3.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema nacional de servidores públicos y particulares sancionados
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className="m-0 box-border p-2">
-          <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s4.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de información y comunicación del Sistema Nacional
-                    Anticorrupción y del Sistema Nacional de Fiscalización
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className="m-0 box-border p-2">
-          <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s5.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de denuncias públicas de faltas administrativas y
-                    hechos de corrupción
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className="m-0 box-border p-2">
-          <a
-            href=""
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems text-center no-underline rounded-lg flex flex-col h-full"
-          >
-            <div>
-              <div className="opacity-100 transform-none">
-                <button className="flex flex-col items-center justify-center relative box-border bg-transparent outline-none border-none m-0 p-0 cursor-not-allowed select-none align-middle no-underline w-full">
-                  <img
-                    src="/img/s6.svg"
-                    alt=""
-                    className='className="block w-auto p-8 object-scale-down" '
-                  />
-                  <p className="m-0 mx-2 mb-4 font-normal text-[0.979592rem] leading-normal text-white">
-                    Sistema de información pública de contrataciones
-                  </p>
-                  <span className="pointer-events-none absolute top-0 right-0 bottom-0 left-0 opacity-0 bg-current overflow-hidden rounded-inherit transition-opacity duration-250 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
-                  <span className="overflow-hidden pointer-events-none absolute z-0 inset-0 rounded-inherit"></span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </>
-  );
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
 };
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const InicioCiudadano = () => (
+  <motion.div
+    className="mx-10 py-32 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={containerVariants}
+  >
+    {SISTEMAS.map((sistema, i) => (
+      <SystemCard key={i} {...sistema} variants={itemVariants} />
+    ))}
+  </motion.div>
+);
 
 export default InicioCiudadano;

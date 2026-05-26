@@ -1,145 +1,76 @@
-import React from "react";
 import { motion } from "framer-motion";
+import SystemCard from "../../components/SystemCard";
 
-const InicioFuncionario = () => {
-  
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
+const ACTIVE_CLASS = "bg-[#1FB6D5] hover:bg-[#6FD3E8] transition-colors duration-200";
 
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
+const SISTEMAS = [
+  {
+    url: "https://pdecolima.mx/s1",
+    imagen: "/img/s1.svg",
+    descripcion: "Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal",
+    activeClass: ACTIVE_CLASS,
+  },
+  {
+    url: null,
+    imagen: "/img/s2.svg",
+    descripcion: "Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas",
+    activeClass: null,
+  },
+  {
+    url: "https://pdecolima.mx/s3",
+    imagen: "/img/s3.svg",
+    descripcion: "Sistema de servidores públicos y particulares sancionados",
+    activeClass: ACTIVE_CLASS,
+  },
+  {
+    url: null,
+    imagen: "/img/s4.svg",
+    descripcion: "Sistema de información y comunicación del Sistema Nacional Anticorrupción y del Sistema Nacional de Fiscalización",
+    activeClass: null,
+  },
+  {
+    url: null,
+    imagen: "/img/s5.svg",
+    descripcion: "Sistema de denuncias públicas de faltas administrativas y hechos de corrupción",
+    activeClass: null,
+  },
+  {
+    url: null,
+    imagen: "/img/s6.svg",
+    descripcion: "Sistema de información pública de contrataciones",
+    activeClass: null,
+  },
+];
 
-  return (
-    <div className="relative min-h-screen">
-      
-      {/* 🖼️ Fondo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center hidden md:block z-0"
-        style={{ backgroundImage: "url('/img/fondoSistemas.png')" }}
-      />
-
-      {/* 🌑 Overlay */}
-      <div className="absolute inset-0 bg-black/25 z-10" />
-
-      {/* 🧩 Contenido */}
-      <motion.div
-        className="relative z-20 mx-10 py-32 grid grid-cols-1 gap-2
-                   xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        {/* CARD 1 */}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            href="https://pdecolima.mx/s1"
-            className="bg-[#1FB6D5] shadow-cardSystems rounded-lg flex flex-col h-full  transition-colors duration-200 hover:bg-[#6FD3E8]"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8">
-              <img src="/img/s1.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de evolución patrimonial, de declaración de intereses y constancia de presentación de declaración fiscal
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-        {/* CARD 2 */}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
-              <img src="/img/s2.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de los servidores públicos que intervengan en procedimientos de contrataciones públicas
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-        {/* CARD 3*/}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            href="https://pdecolima.mx/s3"
-            className="bg-[#1FB6D5] shadow-cardSystems rounded-lg flex flex-col h-full transition-colors duration-200 hover:bg-[#6FD3E8]"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8 ">
-              <img src="/img/s3.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de servidores públicos y particulares sancionados
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-        {/* CARD 4 */}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
-              <img src="/img/s4.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de información y comunicación del Sistema Nacional Anticorrupción y del Sistema Nacional de Fiscalización
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-        {/* CARD 5 */}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
-              <img src="/img/s5.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de denuncias públicas de faltas administrativas y hechos de corrupción
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-
-        {/* CARD 6 */}
-        <motion.div className="p-2" variants={itemVariants}>
-          <a
-            className="bg-s-gradiente-deshabilitado shadow-cardSystems rounded-lg flex flex-col h-full cursor-not-allowed"
-          >
-            <button className="flex flex-col items-center justify-center w-full h-full p-8 cursor-not-allowed">
-              <img src="/img/s6.svg" alt="" className="w-auto object-scale-down" />
-              <p className="mt-4 text-white text-center h-1/2 font-bold">
-                Sistema de información pública de contrataciones
-              </p>
-            </button>
-          </a>
-        </motion.div>
-
-        {/* El resto de cards funciona IGUAL */}
-      </motion.div>
-    </div>
-  );
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
 };
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const InicioFuncionario = () => (
+  <div className="relative min-h-screen">
+    <div
+      className="absolute inset-0 bg-cover bg-center hidden md:block z-0"
+      style={{ backgroundImage: "url('/img/fondoSistemas.png')" }}
+    />
+    <div className="absolute inset-0 bg-black/25 z-10" />
+    <motion.div
+      className="relative z-20 mx-10 py-32 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+    >
+      {SISTEMAS.map((sistema, i) => (
+        <SystemCard key={i} {...sistema} variants={itemVariants} />
+      ))}
+    </motion.div>
+  </div>
+);
 
 export default InicioFuncionario;
